@@ -1,0 +1,354 @@
+/* src/App.css — component styles for the Snip URL shortener */
+
+.page {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 24px 64px;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding: 56px 0 40px;
+  text-align: center;
+  position: relative;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -0.01em;
+  color: var(--indigo-deep);
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--amber);
+  color: var(--indigo-deep);
+  font-size: 1rem;
+  transform: rotate(-12deg);
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin: 0 0 14px;
+  color: var(--indigo-deep);
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  margin: 0 0 36px;
+}
+
+/* ---------- Shorten form ---------- */
+
+.shorten-form {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.shorten-form__row {
+  display: flex;
+  gap: 10px;
+  background: var(--paper-card);
+  padding: 8px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 24px -12px rgba(27, 33, 64, 0.18);
+}
+
+.shorten-form input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 12px 14px;
+  font-size: 1rem;
+  font-family: var(--font-body);
+  color: var(--ink);
+  min-width: 0;
+}
+
+.shorten-form input::placeholder {
+  color: #9BA1BE;
+}
+
+.shorten-form input:focus {
+  outline: none;
+}
+
+.shorten-form button {
+  border: none;
+  background: var(--indigo-deep);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 12px 22px;
+  border-radius: var(--radius-md);
+  transition: background 0.15s ease, transform 0.15s ease;
+  white-space: nowrap;
+}
+
+.shorten-form button:hover:not(:disabled) {
+  background: var(--indigo);
+}
+
+.shorten-form button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.shorten-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-status {
+  margin: 12px 4px 0;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.form-status--success {
+  color: var(--success);
+}
+
+.form-status--error {
+  color: var(--danger);
+}
+
+/* ---------- Perforated divider (signature element) ---------- */
+
+.hero::after {
+  content: '';
+  display: block;
+  margin: 44px auto 0;
+  width: 100%;
+  max-width: 620px;
+  border-bottom: 2px dashed #C7CCE0;
+}
+
+/* ---------- Content / table section ---------- */
+
+.content {
+  padding-top: 40px;
+}
+
+.content-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.content-header h2 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--indigo-deep);
+  margin: 0;
+}
+
+.ghost-btn {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 7px 14px;
+  border-radius: var(--radius-sm);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.ghost-btn:hover:not(:disabled) {
+  background: var(--paper-card);
+  color: var(--indigo-deep);
+}
+
+.list-status {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.empty-state {
+  background: var(--paper-card);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-md);
+  padding: 40px 24px;
+  text-align: center;
+  color: var(--ink-soft);
+}
+
+/* ---------- Table ---------- */
+
+.table-wrap {
+  background: var(--paper-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 8px 24px -16px rgba(27, 33, 64, 0.15);
+}
+
+.urls-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.urls-table thead th {
+  text-align: left;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+  background: #F5F7FB;
+}
+
+.urls-table tbody tr {
+  border-bottom: 1px solid var(--line);
+}
+
+.urls-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.urls-table tbody tr:hover {
+  background: #FAFBFD;
+}
+
+.urls-table td {
+  padding: 14px 16px;
+  vertical-align: middle;
+}
+
+.cell-code a {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.88rem;
+  color: var(--indigo);
+  text-decoration: none;
+}
+
+.cell-code a:hover {
+  text-decoration: underline;
+}
+
+.cell-original {
+  max-width: 320px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--ink-soft);
+}
+
+.cell-clicks {
+  font-family: var(--font-mono);
+  color: var(--ink);
+  text-align: center;
+}
+
+.cell-date {
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.cell-actions {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.icon-btn {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  margin-left: 6px;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.icon-btn:hover {
+  background: var(--paper);
+  color: var(--indigo-deep);
+}
+
+.icon-btn--danger:hover {
+  background: #FBEAE6;
+  color: var(--danger);
+  border-color: #EFC3B8;
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  margin-top: 56px;
+  text-align: center;
+  color: #9BA1BE;
+  font-size: 0.82rem;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 640px) {
+  .shorten-form__row {
+    flex-direction: column;
+  }
+
+  .shorten-form button {
+    width: 100%;
+  }
+
+  .cell-original {
+    max-width: 160px;
+  }
+
+  .urls-table thead {
+    display: none;
+  }
+
+  .urls-table,
+  .urls-table tbody,
+  .urls-table tr,
+  .urls-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .urls-table tr {
+    padding: 12px 0;
+  }
+
+  .urls-table td {
+    padding: 4px 16px;
+  }
+
+  .cell-actions {
+    text-align: left;
+    padding-top: 8px;
+  }
+
+  .icon-btn {
+    margin-left: 0;
+    margin-right: 8px;
+  }
+}
