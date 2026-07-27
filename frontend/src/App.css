@@ -1,4 +1,4 @@
-/* src/App.css — component styles for the Snip URL shortener */
+
 
 .page {
   max-width: 920px;
@@ -6,7 +6,6 @@
   padding: 0 24px 64px;
 }
 
-/* ---------- Hero ---------- */
 
 .hero {
   padding: 56px 0 40px;
@@ -131,7 +130,7 @@
   color: var(--danger);
 }
 
-/* ---------- Perforated divider (signature element) ---------- */
+\
 
 .hero::after {
   content: '';
@@ -142,7 +141,7 @@
   border-bottom: 2px dashed #C7CCE0;
 }
 
-/* ---------- Content / table section ---------- */
+
 
 .content {
   padding-top: 40px;
@@ -193,7 +192,7 @@
   color: var(--ink-soft);
 }
 
-/* ---------- Table ---------- */
+
 
 .table-wrap {
   background: var(--paper-card);
@@ -307,7 +306,7 @@
   font-size: 0.82rem;
 }
 
-/* ---------- Responsive ---------- */
+
 
 @media (max-width: 640px) {
   .shorten-form__row {
