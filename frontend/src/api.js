@@ -1,4 +1,4 @@
-// src/api.js — thin wrapper around the backend API
+
 const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5000';
 
 async function handle(res) {
